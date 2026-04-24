@@ -1,0 +1,4 @@
+[  177742ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://jaiclub.win/learn:0
+[  183711ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://jaiclub.win/learn:0
+[  369985ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ https://jaiclub.win/admin:0
+[  372558ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://jaiclub.win/admin/login:0

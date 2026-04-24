@@ -1,0 +1,46 @@
+- generic [ref=e2]:
+  - navigation [ref=e3]:
+    - generic [ref=e4]:
+      - img "JaiData Logo" [ref=e5]
+      - generic [ref=e6]:
+        - generic [ref=e47]: नि:शुल्क
+        - button "Toggle language" [active] [ref=e9] [cursor=pointer]: HI
+  - banner [ref=e10]:
+    - heading "भारतीय तरीके से डेटा सीखें" [level=1] [ref=e48]
+    - paragraph [ref=e12]: जानना चाहते हैं कि AI नंबरों में पैटर्न कैसे ढूंढता है? JaiData सीखने, साझा करने और आगे बढ़ने की जगह है—कठिन शब्द नहीं, बस सरल भाषा और सबके लिए काम की जानकारी।
+  - main [ref=e13]:
+    - generic [ref=e14]:
+      - heading "हम सीखना कैसे आसान बनाते हैं" [level=2] [ref=e49]
+      - generic [ref=e16]:
+        - generic [ref=e17]: "1"
+        - generic [ref=e18]:
+          - heading "समझें" [level=3] [ref=e50]
+          - paragraph [ref=e20]: हम मुश्किल AI विचारों को सरल, रोजमर्रा की भाषा में समझाते हैं—गणित के विशेषज्ञ होने की कोई ज़रूरत नहीं!
+      - generic [ref=e21]:
+        - generic [ref=e22]: "2"
+        - generic [ref=e23]:
+          - heading "विश्लेषण करें" [level=3] [ref=e51]
+          - paragraph [ref=e25]: डेटा में पैटर्न वैसे ही पहचानें जैसे आप क्रिकेट स्कोर या शॉपिंग बिल में ट्रेंड देखते हैं। यह आपके विचार से कहीं आसान है।
+      - generic [ref=e26]:
+        - generic [ref=e27]: "3"
+        - generic [ref=e28]:
+          - heading "लागू करें" [level=3] [ref=e52]
+          - paragraph [ref=e30]: जो आप सीखते हैं उसे वास्तविक जीवन की समस्याओं पर लागू करें—चाहे पढ़ाई के लिए, नौकरी के लिए, या सिर्फ जिज्ञासा के लिए।
+    - generic [ref=e31]:
+      - heading "आप क्या सीखेंगे" [level=2] [ref=e53]
+      - list [ref=e33]:
+        - listitem [ref=e34]: दैनिक जीवन के लिए मशीन लर्निंग
+        - listitem [ref=e35]: डेटा समझने के आसान तरीके
+        - listitem [ref=e36]: बड़ी कंपनियाँ जानकारी कैसे प्रोसेस करती हैं
+        - listitem [ref=e37]: नंबरों के बारे में सोचने के स्मार्ट तरीके
+    - paragraph [ref=e39]:
+      - generic [ref=e54]:
+        - strong [ref=e55]: "एक ज़रूरी सूचना:"
+        - text: JaiData सीखने वालों द्वारा, सीखने वालों के लिए बनाया गया है। हम किसी अन्य वेबसाइट, कंपनी या सेवा से नहीं जुड़े हैं—हम बस ज्ञान साझा करने के शौकीन लोगों का समूह हैं। यहाँ सब कुछ केवल सीखने और मनोरंजन के लिए है। कोई सलाह नहीं, कोई वादा नहीं—बस शुद्ध शिक्षा, भारतीय शैली में!
+    - generic [ref=e42]:
+      - link "हमारे भारतीय लर्निंग ग्रुप से जुड़ें" [ref=e56] [cursor=pointer]:
+        - /url: https://t.me/predictwingoo
+        - generic [ref=e57]: हमारे भारतीय लर्निंग ग्रुप से जुड़ें
+      - link "देखें हम क्या पढ़ रहे हैं" [ref=e58] [cursor=pointer]:
+        - /url: https://t.me/predictwingoo
+        - generic [ref=e59]: देखें हम क्या पढ़ रहे हैं

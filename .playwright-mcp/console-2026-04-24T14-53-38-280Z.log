@@ -1,0 +1,14 @@
+[   17045ms] [WARNING]  @ https://jaiclub.win/assets/js/common.modules-5cfe2cf4.js:23
+[   17150ms] [WARNING] [Vue warn]: inject() can only be used inside setup() or functional components. @ https://jaiclub.win/assets/js/common.modules-5cfe2cf4.js:2
+[   17161ms] [LOG] 🍎NativeBridge 未定义 @ https://jaiclub.win/assets/js/page-activity-ActivityDetail-9ac516de.js:20
+[   17207ms] [LOG] window.location.origin https://jaiclub.win @ https://jaiclub.win/assets/js/page-activity-ActivityDetail-9ac516de.js:20
+[   17291ms] [LOG] window.location.origin https://jaiclub.win @ https://jaiclub.win/assets/js/page-activity-ActivityDetail-9ac516de.js:20
+[   17407ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ https://jaiclub.win/#/login:0
+[   17407ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ https://jaiclub.win/#/login:0
+[   18543ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://jaiclub.win/cdn-cgi/rum?:0
+[   18548ms] [LOG] window.location.origin https://jaiclub.win @ https://jaiclub.win/assets/js/page-activity-ActivityDetail-9ac516de.js:20
+[   18555ms] [LOG] Service Worker registered with scope: https://jaiclub.win/ @ https://jaiclub.win/assets/js/page-activity-ActivityDetail-9ac516de.js:20
+[   18563ms] [LOG] beforeinstallprompt BeforeInstallPromptEvent @ https://jaiclub.win/assets/js/page-activity-ActivityDetail-9ac516de.js:1
+[   18564ms] [INFO] Banner not shown: beforeinstallpromptevent.preventDefault() called. The page must call beforeinstallpromptevent.prompt() to show the banner. @ https://jaiclub.win/#/login:0
+[   30763ms] [LOG] 🍎获取PWA域名列表: [Object, Object, Object, Object, Object, Object, Object, Object, Object, Object] @ https://jaiclub.win/assets/js/page-activity-ActivityDetail-9ac516de.js:20
+[  117894ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://jaiclub.win/cdn-cgi/rum?:0

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 44" width="120" height="44">
+  <defs>
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fb8466" />
+      <stop offset="33%" stop-color="#bd5bd4" />
+      <stop offset="66%" stop-color="#7473fa" />
+      <stop offset="100%" stop-color="#53b2fa" />
+    </linearGradient>
+  </defs>
+  <path d="M 20 10 L 20 28 C 20 32 16 34 12 34 C 8 34 8 30 8 30" fill="none" stroke="url(#brandGrad)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="20" cy="10" r="3" fill="#ffffff" />
+  <circle cx="8" cy="30" r="3" fill="#ffffff" />
+  <circle cx="32" cy="18" r="3" fill="#ffffff" />
+  <path d="M 20 20 L 32 18" fill="none" stroke="url(#brandGrad)" stroke-width="2" />
+  <text x="40" y="28" font-family="-apple-system, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#ffffff">Jai<tspan fill="#a08fff">Data</tspan></text>
+</svg>

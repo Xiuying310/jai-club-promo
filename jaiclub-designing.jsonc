@@ -1,0 +1,305 @@
+{
+  // JaiClub login-page design extraction.
+  // Source inspected with Playwright from https://jaiclub.win/#/login on 2026-04-24.
+  // Intent: use these tokens/recipes for official-looking promo, landing, or affiliate pages.
+  "meta": {
+    "brand": "JaiClub",
+    "sourcePage": "https://jaiclub.win/#/login",
+    "sourceTitle": "jaiclub",
+    "primaryPattern": "dark mobile app shell + neon gradient header + purple actions",
+    "doNotOverdo": [
+      "Do not turn this into a generic casino rainbow page.",
+      "Keep the page dark, compact, mobile-first, and app-like.",
+      "Use the gradient as an accent/header, not as the whole background."
+    ]
+  },
+
+  "assets": {
+    "logo": "https://ossimg.jaiclubpay.com/jaiclub/other/h5setting_20260325173216i7r4.png",
+    "languageFlagEn": "https://jaiclub.win/assets/png/en-4c6eba8e.webp",
+    "eyeHidden": "https://jaiclub.win/assets/png/eyeInvisible-821d9d16.webp",
+    "passwordTipIcon": "https://jaiclub.win/assets/png/tip-0498e3f9.webp",
+    "customerServiceIcon": "https://jaiclub.win/assets/png/iconservr-dafbd4f0.webp",
+    "serviceIconLarge": "https://jaiclub.win/assets/png/icon_sevice-d0778bf5.webp",
+    "fallbackProxyLogo": "https://jaiclub.win/proxy-assets/logo.png"
+  },
+
+  "colors": {
+    "pageGutter": "#9195a3",
+    "appBg": "#1a1a2c",
+    "surface": "#22224b",
+    "surfaceStrong": "#22224b",
+    "textPrimary": "#ffffff",
+    "textMuted": "#d7d7d7",
+    "textDisabled": "#d7d7d7",
+    "accent": "#a08fff",
+    "buttonDisabledBg": "#93939d",
+    "checkboxBorder": "#c8c9cc",
+    "overlay": "rgba(0, 0, 0, 0.6)",
+    "gradientStops": {
+      "sunset": "#fb8466",
+      "magenta": "#bd5bd4",
+      "violet": "#7473fa",
+      "sky": "#53b2fa"
+    },
+    "brandGradient": "linear-gradient(90deg, #fb8466 0%, #bd5bd4 33%, #7473fa 66%, #53b2fa 100%)"
+  },
+
+  "typography": {
+    "fontFamily": "-apple-system, system-ui, Helvetica Neue, Helvetica, Segoe UI, Arial, Roboto, PingFang SC, miui, Hiragino Sans GB, Microsoft Yahei, sans-serif",
+    "basePx": 12,
+    "weights": {
+      "regular": 400,
+      "bold": 700
+    },
+    "scaleOn390": {
+      "navLanguage": "15.6px",
+      "headerTitle": "16.64px bold",
+      "headerBody": "11.44px regular",
+      "tab": "15.6px bold",
+      "fieldLabel": "15.6px regular",
+      "input": "14.56px regular",
+      "button": "18.72px bold",
+      "footerAction": "12.48px regular"
+    }
+  },
+
+  "responsive": {
+    // The site uses a rem-based mobile scaler. Measured behavior:
+    // 390px viewport => 1rem = 39px; 430px => 43px; 540-799px => 54px; >=800px => 40px.
+    "rootRemPx": [
+      { "viewport": "0-540px", "formula": "viewportWidth / 10" },
+      { "viewport": "541-799px", "formula": "54px fixed" },
+      { "viewport": ">=800px", "formula": "40px fixed" }
+    ],
+    "appShellWidth": [
+      { "viewport": "0-540px", "width": "100vw", "x": 0 },
+      { "viewport": "541-799px", "width": "540px", "x": "(viewportWidth - 540) / 2" },
+      { "viewport": ">=800px", "width": "400px", "x": "(viewportWidth - 400) / 2" }
+    ],
+    "measuredBreakpoints": [
+      { "viewport": 360, "rem": 36, "appWidth": 360, "headingHeight": 96 },
+      { "viewport": 390, "rem": 39, "appWidth": 390, "headingHeight": 104 },
+      { "viewport": 430, "rem": 43, "appWidth": 430, "headingHeight": 114.7 },
+      { "viewport": 540, "rem": 54, "appWidth": 540, "headingHeight": 144 },
+      { "viewport": 768, "rem": 54, "appWidth": 540, "headingHeight": 144 },
+      { "viewport": 799, "rem": 54, "appWidth": 540 },
+      { "viewport": 800, "rem": 40, "appWidth": 400 },
+      { "viewport": 1200, "rem": 40, "appWidth": 400 }
+    ],
+    "desktopBehavior": "Body/html stay #9195a3. The JaiClub app is centered as a narrow vertical shell."
+  },
+
+  "layoutTokensRem": {
+    "navHeight": 1.2267,
+    "pagePaddingX": 0.5333,
+    "gradientHeaderHeight": 2.6667,
+    "tabBarHeight": 1.73,
+    "formTopMargin": 0.7467,
+    "fieldBlockGap": 0.8,
+    "fieldHeight": 1.1733,
+    "fieldRadius": 0.2667,
+    "fieldPaddingY": 0.36,
+    "fieldPaddingX": 0.3467,
+    "buttonWidth": 7.7333,
+    "buttonHeight": 1.0667,
+    "buttonRadius": 1.0667,
+    "buttonGap": 0.5333,
+    "footerTopMargin": 0.7733
+  },
+
+  "components": {
+    "appShell": {
+      "background": "{colors.appBg}",
+      "minHeight": "100vh",
+      "width": "responsive.appShellWidth",
+      "margin": "0 auto",
+      "overflow": "auto",
+      "outerBackground": "{colors.pageGutter}"
+    },
+
+    "topNav": {
+      "height": "1.2267rem",
+      "background": "{colors.surface}",
+      "position": "fixed inside app shell",
+      "layout": "left back icon, centered logo, right language switcher",
+      "logo": {
+        "widthOn390": "116.5px",
+        "heightOn390": "43.7px",
+        "backgroundImage": "{assets.logo}",
+        "backgroundSize": "contain",
+        "backgroundRepeat": "no-repeat",
+        "backgroundPosition": "center"
+      },
+      "backIcon": {
+        "font": "Vant arrow-left icon",
+        "size": "0.48rem",
+        "color": "{colors.textPrimary}",
+        "left": "0.32rem"
+      },
+      "language": {
+        "flagSize": "0.6rem",
+        "text": "EN",
+        "fontSize": "0.4rem",
+        "color": "{colors.textPrimary}",
+        "right": "0.32rem"
+      }
+    },
+
+    "gradientIntro": {
+      "y": "below nav",
+      "height": "2.6667rem",
+      "paddingX": "0.5333rem",
+      "background": "{colors.brandGradient}",
+      "title": {
+        "text": "Log in",
+        "color": "{colors.textPrimary}",
+        "fontSize": "0.4267rem",
+        "fontWeight": 700,
+        "paddingTop": "0.2667rem"
+      },
+      "body": {
+        "color": "{colors.textPrimary}",
+        "fontSize": "0.2933rem",
+        "marginTop": "0.2933rem",
+        "lineWrapping": "2 compact lines"
+      }
+    },
+
+    "tabSwitcher": {
+      "height": "1.73rem",
+      "paddingX": "0.5333rem",
+      "columns": 2,
+      "activeColor": "{colors.accent}",
+      "inactiveColor": "{colors.textMuted}",
+      "fontSize": "0.4rem",
+      "fontWeight": 700,
+      "iconAboveLabel": true,
+      "underline": {
+        "color": "{colors.accent}",
+        "height": "1px",
+        "activeColumnWidth": "100%",
+        "inactiveTrackColor": "rgba(160, 143, 255, 0.35)"
+      },
+      "tabs": ["phone number", "Email Login"]
+    },
+
+    "formFields": {
+      "container": {
+        "paddingX": "0.5333rem",
+        "marginTop": "0.7467rem"
+      },
+      "label": {
+        "color": "{colors.textPrimary}",
+        "fontSize": "0.4rem",
+        "fontWeight": 400,
+        "marginBottom": "0.32rem",
+        "iconColor": "{colors.accent}",
+        "iconSize": "0.5333rem"
+      },
+      "input": {
+        "height": "1.1733rem",
+        "background": "{colors.surface}",
+        "color": "{colors.textPrimary}",
+        "placeholderColor": "#a9a8c0",
+        "fontSize": "0.3733rem",
+        "border": "0",
+        "borderRadius": "0.2667rem",
+        "padding": "0.36rem 0.3467rem"
+      },
+      "phoneRow": {
+        "countryCodeWidth": "2.48rem",
+        "inputMarginLeft": "2.6667rem",
+        "countryCodeText": "+91",
+        "note": "Phone input is split: left selector block + right input."
+      },
+      "emailRow": {
+        "inputWidth": "full form width",
+        "placeholder": "please input your email"
+      },
+      "password": {
+        "fullWidth": true,
+        "rightIcon": "{assets.eyeHidden}",
+        "iconSize": "0.5333rem"
+      }
+    },
+
+    "checkbox": {
+      "size": "20px fixed",
+      "border": "0.5px solid {colors.checkboxBorder}",
+      "borderRadius": "100%",
+      "labelColor": "{colors.textMuted}",
+      "labelFontSize": "12px",
+      "gap": "8px",
+      "text": "Remember password"
+    },
+
+    "buttons": {
+      "primaryDisabled": {
+        "text": "Log in",
+        "width": "7.7333rem",
+        "height": "1.0667rem",
+        "background": "{colors.buttonDisabledBg}",
+        "color": "{colors.textDisabled}",
+        "fontSize": "0.48rem",
+        "fontWeight": 700,
+        "border": "0",
+        "borderRadius": "999px",
+        "letterSpacing": "0.08em"
+      },
+      "secondaryOutline": {
+        "text": "Register",
+        "width": "7.7333rem",
+        "height": "1.0667rem",
+        "background": "transparent",
+        "color": "{colors.accent}",
+        "border": "0.5px solid {colors.accent}",
+        "borderRadius": "999px",
+        "fontSize": "0.48rem",
+        "fontWeight": 700,
+        "marginTop": "0.5333rem",
+        "letterSpacing": "0.08em"
+      }
+    },
+
+    "footerActions": {
+      "layout": "two equal columns",
+      "marginTop": "0.7733rem",
+      "color": "{colors.accent}",
+      "labelColor": "{colors.textPrimary}",
+      "labelFontSize": "0.32rem",
+      "iconSize": "0.72rem",
+      "items": ["Forgot password", "Customer Service"]
+    }
+  },
+
+  "measured390": {
+    "nav": { "height": 47.8, "logo": { "x": 136.8, "y": 2.1, "w": 116.5, "h": 43.7 } },
+    "gradientIntro": { "x": 0, "y": 47.8, "w": 390, "h": 104 },
+    "tabs": { "x": 0, "y": 151.8, "w": 390, "h": 67.5 },
+    "form": { "x": 0, "y": 248.5, "w": 390, "h": 466.5 },
+    "phoneInput": { "x": 125.8, "y": 285.9, "w": 242.3, "h": 45.8 },
+    "passwordInput": { "x": 21.8, "y": 400.3, "w": 342.9, "h": 45.8 },
+    "loginButton": { "x": 44.2, "y": 516.5, "w": 301.6, "h": 41.6 },
+    "registerButton": { "x": 44.2, "y": 578.8, "w": 301.6, "h": 41.6 },
+    "footer": { "x": 20.8, "y": 650.6, "w": 348.4, "h": 64.4 }
+  },
+
+  "landingPageGuidance": {
+    "recommendedStructure": [
+      "Keep a centered app-shell or phone-preview hero over #9195a3 or a very dark page.",
+      "Use #1a1a2c as the main canvas and #22224b for fields/cards.",
+      "Use the four-stop gradient for top bands, CTA accents, badges, or section separators.",
+      "Use #a08fff for active states, outlines, icons, and secondary CTAs.",
+      "Use rounded pill CTAs, compact typography, and exact mobile-first spacing."
+    ],
+    "promoHeroRecipe": {
+      "background": "{colors.appBg}",
+      "topBand": "{colors.brandGradient}",
+      "logoPlacement": "centered at top, same aspect as login nav",
+      "primaryCTA": "pill button, gradient fill allowed for promo pages",
+      "secondaryCTA": "transparent pill outline in #a08fff",
+      "contentDensity": "compact; avoid huge marketing whitespace"
+    }
+  }
+}
