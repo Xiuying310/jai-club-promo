@@ -147,6 +147,14 @@
       const hi = document.body.classList.toggle("lang-hi");
       document.documentElement.lang = hi ? "hi" : "en";
     });
+
+    document.querySelectorAll(".cta-container a").forEach((link) => {
+      link.addEventListener("click", () => {
+        if (typeof fbq === "function") {
+          fbq("track", "Lead");
+        }
+      });
+    });
   </script>
 </body>
 </html>
