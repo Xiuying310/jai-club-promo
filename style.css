@@ -242,3 +242,48 @@ body.lang-hi .btn-primary,
 body.lang-hi .btn-secondary {
   font-size: 0.36rem;
 }
+.contact-detail {
+  margin: 0 0 0.3rem 0;
+  font-size: 0.32rem;
+  color: #d7d7d7;
+  line-height: 1.4;
+}
+.contact-email {
+  display: inline-block;
+  font-size: 0.34rem;
+  color: #a08fff;
+  text-decoration: none;
+  word-break: break-all;
+}
+.contact-email:hover {
+  text-decoration: underline;
+}
+.site-footer {
+  background-color: #22224b;
+  padding: 0.4rem 0.5333rem;
+  text-align: center;
+}
+.footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+.footer-links a {
+  font-size: 0.28rem;
+  color: #a08fff;
+  text-decoration: none;
+}
+.footer-links a:hover {
+  text-decoration: underline;
+}
+.footer-sep {
+  color: #a08fff;
+  font-size: 0.28rem;
+}
+.footer-copy {
+  margin: 0;
+  font-size: 0.24rem;
+  color: #8888aa;
+}

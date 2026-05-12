@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Terms of Service - JaiData</title>
+  <meta name="description" content="JaiData Terms of Service. Understand the terms governing your use of our platform.">
+  <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <nav class="top-nav">
+      <div class="nav-content">
+        <a href="/" style="display:flex;align-items:center"><img src="logo.svg" alt="JaiData Logo" class="logo"></a>
+      </div>
+    </nav>
+    <main class="content-area">
+      <section class="card">
+        <h1 class="section-title">Terms of Service</h1>
+        <p class="contact-detail"><strong>Effective Date:</strong> <span id="eff-date">2026</span></p>
+
+        <h2 class="section-title" style="font-size:0.34rem;margin-top:0.4rem">Acceptance of Terms</h2>
+        <p class="contact-detail">By accessing and using JaiData, you agree to be bound by these Terms of Service. If you do not agree with any part of these terms, please do not use our website.</p>
+
+        <h2 class="section-title" style="font-size:0.34rem;margin-top:0.4rem">Description of Service</h2>
+        <p class="contact-detail">JaiData is a free educational platform that provides learning resources about artificial intelligence, machine learning, and data science. All content is provided for informational and educational purposes only.</p>
+
+        <h2 class="section-title" style="font-size:0.34rem;margin-top:0.4rem">User Conduct</h2>
+        <p class="contact-detail">You agree to use JaiData only for lawful purposes and in a manner that does not infringe on the rights of others or restrict their use of the platform.</p>
+
+        <h2 class="section-title" style="font-size:0.34rem;margin-top:0.4rem">Intellectual Property</h2>
+        <p class="contact-detail">All content on JaiData, including text, graphics, logos, and educational materials, is the property of JaiData and is protected by applicable intellectual property laws.</p>
+
+        <h2 class="section-title" style="font-size:0.34rem;margin-top:0.4rem">Disclaimer</h2>
+        <p class="contact-detail">JaiData provides educational content "as is" without warranties of any kind. We do not guarantee the accuracy, completeness, or usefulness of any information on the platform. JaiData is not a financial advisory service and does not provide investment advice.</p>
+
+        <h2 class="section-title" style="font-size:0.34rem;margin-top:0.4rem">Limitation of Liability</h2>
+        <p class="contact-detail">JaiData shall not be liable for any direct, indirect, incidental, or consequential damages arising from your use of the platform or reliance on any information provided.</p>
+
+        <h2 class="section-title" style="font-size:0.34rem;margin-top:0.4rem">Changes to Terms</h2>
+        <p class="contact-detail">We reserve the right to modify these Terms of Service at any time. Changes will be effective immediately upon posting to this page.</p>
+
+        <h2 class="section-title" style="font-size:0.34rem;margin-top:0.4rem">Contact</h2>
+        <p class="contact-detail">If you have questions about these Terms of Service, contact us at:</p>
+        <a class="contact-email" id="contact-email" href="mailto:hello@jaidata.in">hello@jaidata.in</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <span class="footer-sep">·</span>
+        <a href="/privacy.html">Privacy Policy</a>
+      </div>
+      <p class="footer-copy">© <span id="footer-year">2026</span> JaiData. All rights reserved.</p>
+    </footer>
+  </div>
+  <script>
+    (function() {
+      var host = window.location.hostname;
+      var email = "support@" + host;
+      var el = document.getElementById("contact-email");
+      if (el) {
+        el.textContent = email;
+        el.href = "mailto:" + email;
+      }
+      document.getElementById("footer-year").textContent = new Date().getFullYear();
+      document.getElementById("eff-date").textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>

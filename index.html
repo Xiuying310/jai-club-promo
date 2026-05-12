@@ -4,6 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>JaiData - AI & Data Patterns Education</title>
+  <meta name="description" content="JaiData is a free community for learning AI, machine learning, and data patterns in simple language. Join thousands of Indian learners exploring data science.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="JaiData - Learn AI & Data Patterns the Indian Way">
+  <meta property="og:description" content="Free community for learning AI and data science in simple, everyday language. No jargon, just real skills.">
+  <meta property="og:image" content="/logo.svg">
+  <meta property="og:locale" content="en_IN">
   <link rel="icon" href="logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
   <!-- Meta Pixel Code -->
@@ -131,25 +137,63 @@
       </section>
       
       <div class="cta-container">
-        <a href="https://t.me/predictwingoo" class="btn-primary cta-learn-more">
-          <span data-lang="en">Join Our Indian Learning Group</span>
-          <span data-lang="hi" class="hidden">हमारे भारतीय लर्निंग ग्रुप से जुड़ें</span>
+        <a href="#contact" class="btn-primary cta-learn-more">
+          <span data-lang="en">Get Started Free</span>
+          <span data-lang="hi" class="hidden">मुफ़्त शुरू करें</span>
         </a>
-        <a href="https://t.me/predictwingoo" class="btn-secondary">
-          <span data-lang="en">See What We’re Studying</span>
-          <span data-lang="hi" class="hidden">देखें हम क्या पढ़ रहे हैं</span>
+        <a href="#contact" class="btn-secondary">
+          <span data-lang="en">Contact Us</span>
+          <span data-lang="hi" class="hidden">संपर्क करें</span>
         </a>
       </div>
+
+      <section class="card" id="contact">
+        <h2 class="section-title">
+          <span data-lang="en">Contact Us</span>
+          <span data-lang="hi" class="hidden">संपर्क करें</span>
+        </h2>
+        <p class="contact-detail">
+          <span data-lang="en">Have a question or want to join our community? Reach out to us:</span>
+          <span data-lang="hi" class="hidden">कोई सवाल है या हमारे समुदाय से जुड़ना चाहते हैं? हमसे संपर्क करें:</span>
+        </p>
+        <a class="contact-email" id="contact-email" href="mailto:hello@jaidata.in">hello@jaidata.in</a>
+      </section>
     </main>
+
+    <footer class="site-footer">
+      <div class="footer-links">
+        <a href="/privacy.html">
+          <span data-lang="en">Privacy Policy</span>
+          <span data-lang="hi" class="hidden">गोपनीयता नीति</span>
+        </a>
+        <span class="footer-sep">·</span>
+        <a href="/terms.html">
+          <span data-lang="en">Terms of Service</span>
+          <span data-lang="hi" class="hidden">सेवा की शर्तें</span>
+        </a>
+      </div>
+      <p class="footer-copy">© <span id="footer-year">2026</span> JaiData. All rights reserved.</p>
+    </footer>
   </div>
   <script>
-    document.querySelector(".language-selector").addEventListener("click", () => {
-      const hi = document.body.classList.toggle("lang-hi");
+    (function() {
+      var host = window.location.hostname;
+      var email = "support@" + host;
+      var el = document.getElementById("contact-email");
+      if (el) {
+        el.textContent = email;
+        el.href = "mailto:" + email;
+      }
+      document.getElementById("footer-year").textContent = new Date().getFullYear();
+    })();
+
+    document.querySelector(".language-selector").addEventListener("click", function() {
+      var hi = document.body.classList.toggle("lang-hi");
       document.documentElement.lang = hi ? "hi" : "en";
     });
 
-    document.querySelectorAll(".cta-container a").forEach((link) => {
-      link.addEventListener("click", () => {
+    document.querySelectorAll(".cta-container a").forEach(function(link) {
+      link.addEventListener("click", function() {
         if (typeof fbq === "function") {
           fbq("track", "Lead");
         }

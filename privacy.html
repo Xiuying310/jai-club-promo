@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Privacy Policy - JaiData</title>
+  <meta name="description" content="JaiData Privacy Policy. Learn how we handle your information.">
+  <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <nav class="top-nav">
+      <div class="nav-content">
+        <a href="/" style="display:flex;align-items:center"><img src="logo.svg" alt="JaiData Logo" class="logo"></a>
+      </div>
+    </nav>
+    <main class="content-area">
+      <section class="card">
+        <h1 class="section-title">Privacy Policy</h1>
+        <p class="contact-detail"><strong>Effective Date:</strong> <span id="eff-date">2026</span></p>
+
+        <h2 class="section-title" style="font-size:0.34rem;margin-top:0.4rem">Information We Collect</h2>
+        <p class="contact-detail">When you visit JaiData, we may collect basic usage data such as your browser type, device type, pages visited, and time spent on each page. This is done through industry-standard analytics tools to help us improve our educational content.</p>
+
+        <h2 class="section-title" style="font-size:0.34rem;margin-top:0.4rem">How We Use Your Information</h2>
+        <p class="contact-detail">We use the information collected to improve site functionality, understand which educational topics are most popular, and enhance your overall learning experience. We do not sell, rent, or share your personal information with third parties for marketing purposes.</p>
+
+        <h2 class="section-title" style="font-size:0.34rem;margin-top:0.4rem">Cookies and Tracking</h2>
+        <p class="contact-detail">JaiData uses cookies and similar tracking technologies (including the Meta Pixel) to measure advertising effectiveness and understand how visitors use our site. You can control cookie preferences through your browser settings.</p>
+
+        <h2 class="section-title" style="font-size:0.34rem;margin-top:0.4rem">Third-Party Services</h2>
+        <p class="contact-detail">We may use third-party services such as Meta (Facebook) for advertising and analytics. These services may collect information about your visit in accordance with their own privacy policies.</p>
+
+        <h2 class="section-title" style="font-size:0.34rem;margin-top:0.4rem">Data Security</h2>
+        <p class="contact-detail">We take reasonable measures to protect the information we collect. However, no method of electronic transmission or storage is 100% secure.</p>
+
+        <h2 class="section-title" style="font-size:0.34rem;margin-top:0.4rem">Children's Privacy</h2>
+        <p class="contact-detail">JaiData is intended for a general audience. We do not knowingly collect personal information from children under 13.</p>
+
+        <h2 class="section-title" style="font-size:0.34rem;margin-top:0.4rem">Changes to This Policy</h2>
+        <p class="contact-detail">We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated effective date.</p>
+
+        <h2 class="section-title" style="font-size:0.34rem;margin-top:0.4rem">Contact</h2>
+        <p class="contact-detail">If you have questions about this Privacy Policy, contact us at:</p>
+        <a class="contact-email" id="contact-email" href="mailto:hello@jaidata.in">hello@jaidata.in</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <span class="footer-sep">·</span>
+        <a href="/terms.html">Terms of Service</a>
+      </div>
+      <p class="footer-copy">© <span id="footer-year">2026</span> JaiData. All rights reserved.</p>
+    </footer>
+  </div>
+  <script>
+    (function() {
+      var host = window.location.hostname;
+      var email = "support@" + host;
+      var el = document.getElementById("contact-email");
+      if (el) {
+        el.textContent = email;
+        el.href = "mailto:" + email;
+      }
+      document.getElementById("footer-year").textContent = new Date().getFullYear();
+      document.getElementById("eff-date").textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
